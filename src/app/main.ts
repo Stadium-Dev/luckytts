@@ -1,5 +1,8 @@
 import SimpleDatabse from './db/db';
 
-function run() {
-    const db = new SimpleDatabse()´;
+async function run() {
+    const db = new SimpleDatabse();
+    await db.init();
 }
+
+run();

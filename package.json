@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node build/main.js",
+    "start": "node build/server.mjs",
     "build:w": "rollup -c -w --compact",
     "build": "rollup -c --compact"
   },
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/luckydye/luckytts#readme",
   "dependencies": {
+    "lit-element": "^3.0.2",
     "lowdb": "^3.0.0",
     "vue": "^2.6.14"
   },

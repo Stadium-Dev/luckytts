@@ -15,6 +15,7 @@
         "sourceMap": true,
         "outDir": "client",
         "moduleResolution": "node",
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true
     }
 }

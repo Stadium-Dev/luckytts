@@ -1,27 +1,41 @@
+import path from 'path';
 import { Low, JSONFile } from 'lowdb';
+import { Data, Account, Widget } from './db.d';
 
 export default class SimpleDatabse {
 
     async init() {
-        type Data = {
-            posts: string[] // Expect posts to be an array of strings
-        }
-        const adapter = new JSONFile<Data>('db.json');
-        const db = new Low<Data>(adapter);
+        const db_path = path.resolve('./data/db.json');
+        console.log("Database path:", db_path);
 
-        db.data.posts.push("string");
+        const adapter = new JSONFile<Data>(db_path);
+        const db = new Low<Data>(adapter);
 
         await db.read();
 
-        db.data ||= { posts: [] };
+        db.data ||= { accounts: [], widgets: [] };
 
-        db.data.posts.push('hello world')
-        db.data.posts[0]
+        db.data.accounts.push(this.createAccount());
+        db.data.accounts[0];
 
-        const { posts } = db.data
-        posts.push('hello world')
+        await db.write();
+    }
 
-        await db.write()
+    createAccount(): Account {
+        return {
+            id: "",
+            user_id: "",
+            created_at: new Date(),
+        }
+    }
+
+    createWidget(): Widget {
+        return {
+            id: "",
+            trigger_id: "",
+            account: "",
+            voice: "",
+        }
     }
 
 }

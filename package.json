@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node build/server.mjs",
+    "start": "go run src/app/main.go",
     "prestart": "npm run setup",
     "build:w": "rollup -c -w",
     "build": "rollup -c",
@@ -32,8 +32,6 @@
     "vue": "^2.6.14"
   },
   "devDependencies": {
-    "@types/aws-sdk": "^2.7.0",
-    "@types/node": "^16.11.10",
-    "@types/uuid4": "^2.0.0"
+    "@types/node": "^16.11.10"
   }
 }

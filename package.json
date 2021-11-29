@@ -6,8 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node build/server.mjs",
-    "build:w": "rollup -c -w --compact",
-    "build": "rollup -c --compact"
+    "prestart": "npm run setup",
+    "build:w": "rollup -c -w",
+    "build": "rollup -c",
+    "setup": "bash env.bash"
   },
   "repository": {
     "type": "git",
@@ -20,16 +22,18 @@
   },
   "homepage": "https://github.com/luckydye/luckytts#readme",
   "dependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-typescript": "^8.3.0",
     "lit-element": "^3.0.2",
-    "lowdb": "^3.0.0",
+    "rollup": "^2.60.1",
+    "typescript": "^4.5.2",
     "vue": "^2.6.14"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^13.0.6",
-    "@rollup/plugin-typescript": "^8.3.0",
-    "@rollup/plugin-wasm": "^5.1.2",
-    "@web/dev-server": "^0.1.28",
-    "rollup": "^2.60.1",
-    "typescript": "^4.5.2"
+    "@types/aws-sdk": "^2.7.0",
+    "@types/node": "^16.11.10",
+    "@types/uuid4": "^2.0.0"
   }
 }

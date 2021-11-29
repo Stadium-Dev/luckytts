@@ -1,9 +1,12 @@
 # luckytts
 
+
 ## Development
 
+Needed: firebase-tools, nodejs, golang
+
 ```
-firebase server
+firebase serve
 ```
 ```
 npm run build:w

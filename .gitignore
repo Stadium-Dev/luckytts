@@ -47,10 +47,6 @@ build/Release
 # Dependency directories
 node_modules/
 
-build/
-**/*.js
-**/*.js.map
-
 # Optional npm cache directory
 .npm
 
@@ -68,3 +64,9 @@ build/
 
 # dotenv environment variables file
 .env
+
+data/
+build/
+public/*.js
+public/*.js.map
+env.*

@@ -1,3 +1,4 @@
+import uuid4 from "uuid4";
 import path from 'path';
 import { Low, JSONFile } from 'lowdb';
 import { Data, Account, Widget } from './db.d';
@@ -15,26 +16,26 @@ export default class SimpleDatabse {
 
         db.data ||= { accounts: [], widgets: [] };
 
-        db.data.accounts.push(this.createAccount());
+        db.data.accounts.push(this.createAccount("testaccount"));
         db.data.accounts[0];
 
         await db.write();
     }
 
-    createAccount(): Account {
+    createAccount(user_id: string): Account {
         return {
-            id: "",
-            user_id: "",
+            id: uuid4(),
+            user_id: user_id,
             created_at: new Date(),
         }
     }
 
-    createWidget(): Widget {
+    createWidget(account_id: string): Widget {
         return {
-            id: "",
+            id: uuid4(),
             trigger_id: "",
-            account: "",
-            voice: "",
+            account: account_id,
+            voice: "Brian",
         }
     }
 

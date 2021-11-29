@@ -1,0 +1,43 @@
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-list .card {
+    flex: none;
+    margin: 5px;
+}
+
+.card.config {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: calc(26px + 20px);
+}
+
+.delete-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    background: #0c0c0c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.delete-btn:hover {
+    background: rgb(65, 26, 26);
+}
+.delete-btn:active {
+    background: rgb(114, 43, 43);
+}
+
+.delete-btn .material-icons {
+    color: white;
+    font-size: 16px;
+    opacity: 0.5;
+}

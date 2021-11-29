@@ -12,3 +12,5 @@
 */
 
 import './components/LinkButtons';
+import './components/Switch';
+import './components/LoginButton';

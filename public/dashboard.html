@@ -9,6 +9,7 @@
   <title>luckytts</title>
 
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="dashboard.css">
 
   <script src="main.js" type="module"></script>
 
@@ -20,20 +21,52 @@
 
   <header>
     <div class="inner-header">
-      <div class="logo"><a>LUCKYTTS</a></div>
+      <div class="logo"><a href="/">LUCKYTTS</a></div>
       <div></div>
       <div>
-        <link-button class="donate-btn" target="_blank" display_icon="favorite" href="https://ko-fi.com/luckydye">Donate</link-button>
-        <link-button display_icon="link">Login with Twitch</link-button>
+        <login-button></login-button>
+        <link-button target="_blank" display_icon="favorite" href="https://ko-fi.com/luckydye">Donate</link-button>
       </div>
     </div>
   </header>
 
   <main>
+
     <div class="card">
-      x
+      Browser Source URL:
+      <br>
+      <br>
+
+      Display Reward Icon:
+      <input-switch></input-switch>
+      
+      <br>
+      <br>
+      Animate Text:
+      <input-switch></input-switch>
+      
+    </div>
+
+    <div class="card-title">
+      Add a reward to read out loud:
+    </div>
+    <div class="card-list">
+      <div class="card config">
+        Dashboard
+
+        <div class="delete-btn">
+          <span class="material-icons">delete</span>
+        </div>
+      </div>
+      <div class="card transparent button">
+        +
+      </div>
     </div>
   </main>
+
+  <footer>
+    © Tim Havlicek
+  </footer>
 </body>
 
 </html>

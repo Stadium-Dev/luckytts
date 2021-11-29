@@ -81,6 +81,7 @@ node_modules/
 # Dependency directories (remove the comment below to include it)
 # vendor/
 
+.aws
 data/
 build/
 public/*.js

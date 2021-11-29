@@ -2,6 +2,7 @@
     "compileOnSave": true,
     "compilerOptions": {
         "strict": true,
+        "target": "ES6",
         "preserveConstEnums": true,
         "removeComments": true,
         "sourceMap": true,

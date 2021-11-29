@@ -1,25 +1,24 @@
-import { css, html, LitElement } from 'lit-element';
+import { css, html, LitElement, customElement, property } from 'lit-element';
 
+@customElement("link-button")
 export default class LinkButton extends LitElement {
 
+    @property({ type: String })
     target: string;
-    href: string;
 
-    static get properties() {
-        return {
-            href: { type: String },
-            target: { type: String, default: "_blank" }
-        };
-    }
+    @property({ type: String })
+    href: string;
+    
+    @property({ type: String })
+    display_icon: string;
 
     static get styles() {
         return css`
             :host {
                 display: inline-block;
                 color: black;
-                --padding: 4px 10px;
+                --padding: 5px 10px;
                 --background: var(--accent-color, #eee);
-                margin-top: 15px;
                 font-size: 14px;
                 font-weight: 600;
             }
@@ -46,7 +45,11 @@ export default class LinkButton extends LitElement {
             }
             .material-icons {
                 margin: 0 5px;
-                display: var(--display-icon, "inherit");
+                display: var(--display-icon, "inline-block");
+                font-display: block;
+                font-size: 20px;
+                margin-right: -2px;
+                margin-left: 15x;
             }
         `;
     }
@@ -54,6 +57,7 @@ export default class LinkButton extends LitElement {
     constructor() {
         super();
 
+        this.display_icon = "arrow_right_alt";
     }
 
     render() {
@@ -61,10 +65,8 @@ export default class LinkButton extends LitElement {
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css" />
             
             <a target="${this.target}" rel="noreferrer" class="open-link" href="${this.href}">
-                <slot></slot> <span class="material-icons">arrow_right_alt</span>
+                <slot></slot> <span class="material-icons">${this.display_icon}</span>
             </a>
         `;
     }
 }
-
-customElements.define('link-button', LinkButton);

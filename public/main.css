@@ -1,0 +1,74 @@
+body {
+    background: #0c0c0c;
+    color: #eee;
+    font-family: sans-serif;
+    margin: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    --accent-color: rgb(148, 89, 207);
+}
+
+footer {
+    padding: 40px 20px;
+    color: rgb(78, 78, 78);
+    background: #111111;
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+header {
+    background: #1c1c1c;
+    border-bottom: 1px solid #2c2d2c;
+    position: relative;
+}
+
+.inner-header {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.donate-btn {
+    --background: #6cb980;
+}
+
+.logo {
+    font-family: system-ui, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0 30px;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid #252525;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    background: #1c1c1c;
+}
+
+.card.feautre {
+    color: #333;
+    background: #6cb980;
+    font-weight: 600;
+}

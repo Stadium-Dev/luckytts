@@ -10,3 +10,5 @@
     - including "Tip" button.
     - Homepage Button, login/logout button
 */
+
+import './components/LinkButtons';

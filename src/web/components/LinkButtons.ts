@@ -1,14 +1,15 @@
-import { css, html, LitElement, customElement, property } from 'lit-element';
+import { LitElement, html, css } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
 
 @customElement("link-button")
 export default class LinkButton extends LitElement {
 
     @property({ type: String })
-    target: string;
+    target: string | undefined;
 
     @property({ type: String })
-    href: string;
-    
+    href: string | undefined;
+
     @property({ type: String })
     display_icon: string;
 

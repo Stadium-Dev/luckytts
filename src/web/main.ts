@@ -15,6 +15,32 @@ import './components/LinkButtons';
 import './components/Switch';
 import './components/LoginButton';
 
+// @ts-ignore
+import { createApp } from 'vue/dist/vue.esm-bundler';
+import Configuration from './views/Configuration';
+
+function init() {
+    const app = createApp({
+        name: 'app',
+        data() {
+            return {
+                lol: 123
+            }
+        },
+        components: {
+            'app-config': Configuration
+        },
+        template: `
+            <div>
+                <app-config></app-config>
+            </div>
+        `
+    });
+    app.mount("#app");
+}
+
+window.addEventListener('DOMContentLoaded', e => init());
+
 
 // Sopces needed: 
 // - channel:read:redemptions

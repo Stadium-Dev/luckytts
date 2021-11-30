@@ -1,4 +1,5 @@
-import { html, css, LitElement } from 'lit-element';
+import { css, html, LitElement } from 'lit';
+import { customElement, property } from 'lit/decorators';
 
 export default class Switch extends LitElement {
 

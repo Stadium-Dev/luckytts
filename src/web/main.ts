@@ -14,3 +14,8 @@
 import './components/LinkButtons';
 import './components/Switch';
 import './components/LoginButton';
+
+
+// Sopces needed: 
+// - channel:read:redemptions
+//      for GET https://api.twitch.tv/helix/channel_points/custom_rewards

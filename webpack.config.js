@@ -1,6 +1,29 @@
 const path = require('path');
 
-module.exports = {
+const serverConfig = {
+    target: 'node',
+    mode: process.env.NODE_ENV || 'development',
+    entry: './src/app/main.ts',
+    module: {
+        rules: [
+            {
+                test: /\.ts?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
+        ],
+    },
+    resolve: {
+        extensions: ['.ts', '.js'],
+    },
+    output: {
+        filename: 'server.js',
+        path: path.resolve(__dirname, 'build'),
+    },
+};
+
+const clientConfig = {
+    target: 'web',
     mode: process.env.NODE_ENV || 'development',
     entry: './src/web/main.ts',
     module: {
@@ -16,7 +39,9 @@ module.exports = {
         extensions: ['.ts', '.js'],
     },
     output: {
-        filename: 'main.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'public'),
     },
 };
+
+module.exports = [serverConfig, clientConfig];

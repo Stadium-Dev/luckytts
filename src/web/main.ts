@@ -18,21 +18,27 @@ import './components/LoginButton';
 // @ts-ignore
 import { createApp } from 'vue/dist/vue.esm-bundler';
 import Configuration from './views/Configuration';
+import Login from './views/Login';
+import { verifyLogin } from './utils/login';
 
 function init() {
     const app = createApp({
         name: 'app',
+        components: {
+            'app-config': Configuration,
+            'app-login': Login
+        },
         data() {
             return {
-                lol: 123
+                loggedIn() {
+                    return verifyLogin()
+                }
             }
-        },
-        components: {
-            'app-config': Configuration
         },
         template: `
             <div>
-                <app-config></app-config>
+                <app-config v-if="loggedIn()"></app-config>
+                <app-login v-else></app-login>
             </div>
         `
     });
@@ -41,7 +47,3 @@ function init() {
 
 window.addEventListener('DOMContentLoaded', e => init());
 
-
-// Sopces needed: 
-// - channel:read:redemptions
-//      for GET https://api.twitch.tv/helix/channel_points/custom_rewards

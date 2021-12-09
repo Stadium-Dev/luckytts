@@ -86,6 +86,6 @@ data/
 build/
 public/*.js
 public/*.js.map
-env.*
+env.bash
 
 **LICENSE.txt

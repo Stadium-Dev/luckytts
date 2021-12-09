@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { loginWithTwitch, verifyLogin } from '../utils/login';
 
 @customElement("login-button")
 export default class LoginButton extends LitElement {
@@ -19,7 +20,7 @@ export default class LoginButton extends LitElement {
     }
 
     render() {
-        const logged_in = false;
+        const logged_in = verifyLogin();
 
         if(logged_in) {
             return html`
@@ -27,7 +28,7 @@ export default class LoginButton extends LitElement {
             `;
         }
         return html`
-            <link-button display_icon="link" href="./dashboard">Login with Twitch</link-button>
+            <link-button @click="${() => loginWithTwitch()}" display_icon="link">Login with Twitch</link-button>
         `;
     }
 }

@@ -65,7 +65,7 @@ export default class LinkButton extends LitElement {
         return html`
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css" />
             
-            <a target="${this.target}" rel="noreferrer" class="open-link" href="${this.href}">
+            <a target="${this.target}" rel="noreferrer" class="open-link" href="${this.href != undefined ? this.href : "javascript:()"}">
                 <slot></slot> <span class="material-icons">${this.display_icon}</span>
             </a>
         `;

@@ -19,9 +19,14 @@ body {
     --global-font-color: #eee;
 }
 
+p {
+    margin-top: 0;
+}
+
 footer {
     padding: 40px 20px;
     color: rgb(78, 78, 78);
+    background: #111111;
     display: flex;
     justify-content: center;
     font-size: 13px;
@@ -29,23 +34,34 @@ footer {
 
 main {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 30px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
 }
 
-.splash {
-    padding: 40px;
-    background: var(--accent-color2);
+header {
+    background: #1c1c1c;
+    border-bottom: 1px solid #2c2d2c;
+    position: relative;
 }
 
-#app {
-    padding: 20px;
+.inner-header {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
     font-family: system-ui, sans-serif;
-    font-size: 42px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 500;
     margin: 0;
 }
 
@@ -99,4 +115,50 @@ main {
 a[href] {
     color: inherit;
     text-decoration: none;
+}
+
+/* Configure */
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-list .card {
+    flex: none;
+    margin: 5px;
+}
+
+.card.config {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: calc(26px + 20px);
+}
+
+.delete-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    background: #0c0c0c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.delete-btn:hover {
+    background: rgb(65, 26, 26);
+}
+.delete-btn:active {
+    background: rgb(114, 43, 43);
+}
+
+.delete-btn .material-icons {
+    color: white;
+    font-size: 16px;
+    opacity: 0.5;
 }

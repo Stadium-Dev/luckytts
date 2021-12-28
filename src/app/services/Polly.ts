@@ -1,6 +1,6 @@
-import AWS from 'aws-sdk';
+import { Polly } from '@aws-sdk/client-polly';
 
-const PollyService = new AWS.Polly({
+const PollyService = new Polly({
     signatureVersion: 'v4',
     region: 'eu-central-1'
 });

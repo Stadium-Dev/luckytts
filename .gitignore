@@ -83,8 +83,6 @@ node_modules/
 
 .aws
 data/
-build/
-public/*.js
 public/*.js.map
 env.bash
 

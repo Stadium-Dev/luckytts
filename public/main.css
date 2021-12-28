@@ -22,7 +22,6 @@ body {
 footer {
     padding: 40px 20px;
     color: rgb(78, 78, 78);
-    background: #111111;
     display: flex;
     justify-content: center;
     font-size: 13px;
@@ -30,34 +29,23 @@ footer {
 
 main {
     width: 100%;
-    max-width: 900px;
-    margin: auto;
-    margin-top: 30px;
-    padding: 0 20px;
-    box-sizing: border-box;
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-header {
-    background: #1c1c1c;
-    border-bottom: 1px solid #2c2d2c;
-    position: relative;
+.splash {
+    padding: 40px;
+    background: var(--accent-color2);
 }
 
-.inner-header {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px 20px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#app {
+    padding: 20px;
 }
 
 .logo {
     font-family: system-ui, sans-serif;
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 42px;
+    font-weight: bold;
     margin: 0;
 }
 

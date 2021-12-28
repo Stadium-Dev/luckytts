@@ -2,6 +2,8 @@ export default {
     name: 'app-config',
     template: `
         <div>
+            <login-button></login-button>
+
             <div class="card">
                 Browser Source URL:
                 <br>

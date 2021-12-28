@@ -9,6 +9,7 @@
   <title>luckytts</title>
 
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="dashboard.css">
 
   <script src="main.js" type="module"></script>
 
@@ -20,27 +21,33 @@
 
   <header>
     <div class="inner-header">
-      <div class="logo"><a href="/">LUCKYTTS</a></div>
       <div></div>
-      <div>
-        <login-button></login-button>
-        <link-button target="_blank" display_icon="favorite" href="https://ko-fi.com/luckydye">Donate</link-button>
-      </div>
     </div>
   </header>
 
   <main>
-    <div class="card feautre">
-      This service is provided for free. Consider donating a little bit to cover the hosting fees.
-    </div>
-    <div class="card">
-      Super simple Text to Speech service for you Twitch Channel Point rewards.
-    </div>
-  </main>
 
-  <footer>
-    © Tim Havlicek
-  </footer>
+    <div class="splash">
+      
+      <div class="logo"><a href="/">LUCKYTTS</a></div>
+
+      <h3>Super simple Text to Speech service for you Twitch Channel Point rewards.</h3>
+
+      <div class="card feautre">
+        This service is provided for free. Consider donating a little bit to cover the hosting fees.
+
+      </div>
+      <link-button target="_blank" display_icon="favorite" href="https://ko-fi.com/luckydye">Donate</link-button>
+
+      <footer>
+        © Tim Havlicek
+      </footer>
+    </div>
+
+    <div id="app">
+    </div>
+
+  </main>
 </body>
 
 </html>

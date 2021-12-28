@@ -9,6 +9,15 @@ import handleAuthentication from './auth/auth';
 async function run() {
     const app = express();
 
+    app.use((req, res) => {
+
+        res.set('Access-Control-Allow-Origin', 'https://luckytts.web.app/');
+        res.set('Access-Control-Allow-Headers', 'Content-Type');
+        res.set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
+
+        res.next();
+    });
+
     app.use('/webhook/twitch/callback', handleWebhookRequest);
     app.use('/api', ApiRouter);
     app.use('/auth', handleAuthentication);

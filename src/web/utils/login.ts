@@ -61,7 +61,7 @@ export function verifyLogin() {
             if(code != undefined) {
                 Api.loginWithCode(code).then(res => {
                     if(res == true) {
-
+                        alert("Login Success");
                     } else {
                         alert("Server Error: Could not login");
                     }
